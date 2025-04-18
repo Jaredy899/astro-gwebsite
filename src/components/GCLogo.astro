@@ -1,0 +1,53 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 700 419"
+	class={className}
+	width="100"
+	height="100"
+>
+	<g>
+		<path
+			class="letter g"
+			aria-label="G"
+			d="M285 0H120C97.9086 0 80 17.9086 80 40V376.797C80 398.889 97.9086 416.797 120 416.797H285C307.091 416.797 325 398.889 325 376.797V250H235V295H280V371.797H125V45H285V0Z"
+		/>
+		<path
+			class="letter c"
+			aria-label="C"
+			d="M350 82.7372C350 37.0217 387.027 0 432.75 0H575V45H432.75C411.988 45 395.006 61.9759 395.006 82.7372V334.06C395.006 354.821 411.988 371.797 432.75 371.797H575V416.797H432.75C387.027 416.797 350 379.775 350 334.06V82.7372Z"
+		/>
+	</g>
+</svg>
+
+<style>
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: currentColor;
+		overflow: visible;
+	}
+	.letter {
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		transform-origin: center;
+	}
+	.g {
+		transform: translateX(0px);
+	}
+	.c {
+		transform: translateX(0px);
+	}
+	svg:hover .g {
+		transform: translateX(-40px) scale(1.3);
+	}
+	svg:hover .c {
+		transform: translateX(40px) scale(1.3);
+	}
+</style> 
